@@ -1,0 +1,728 @@
+fileFormatVersion: 2
+guid: 934c1e58c5bc4f249aed2b3e0e1530ff
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1556894721669192155
+    second: BB-Character-Left_0
+  - first:
+      213: 571723303608989132
+    second: BB-Character-Left_1
+  - first:
+      213: -8111610958270662329
+    second: BB-Character-Left_2
+  - first:
+      213: -6223064206968338456
+    second: BB-Character-Left_3
+  - first:
+      213: -7506170420014394273
+    second: BB-Character-Left_4
+  - first:
+      213: -2086002866796492027
+    second: BB-Character-Left_5
+  - first:
+      213: 5670484096806639734
+    second: BB-Character-Left_6
+  - first:
+      213: -1838966132582556168
+    second: BB-Character-Left_7
+  - first:
+      213: -2496417557269836243
+    second: BB-Character-Left_8
+  - first:
+      213: 7058997602058516991
+    second: BB-Character-Left_9
+  - first:
+      213: 1335902300461306908
+    second: BB-Character-Left_10
+  - first:
+      213: 283019766806576229
+    second: BB-Character-Left_11
+  - first:
+      213: -7937344030584432243
+    second: BB-Character-Left_12
+  - first:
+      213: 6900572832494544979
+    second: BB-Character-Left_13
+  - first:
+      213: -8310509407769672000
+    second: BB-Character-Left_14
+  - first:
+      213: 240181658505301486
+    second: BB-Character-Left_15
+  - first:
+      213: -3524422485930641567
+    second: BB-Character-Left_16
+  - first:
+      213: -4911703614736616799
+    second: BB-Character-Left_17
+  - first:
+      213: 2463743050623901553
+    second: BB-Character-Left_18
+  - first:
+      213: 5053907148818907815
+    second: BB-Character-Left_19
+  - first:
+      213: 1404050285924932040
+    second: BB-Character-Left_20
+  - first:
+      213: 8113859452829177198
+    second: BB-Character-Left_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 450
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BB-Character-Left_0
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 1735
+        width: 267
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd9d5c520833b9510800000000000000
+      internalID: 1556894721669192155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BB-Character-Left_1
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 1731
+        width: 271
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc53d65c05b2fe700800000000000000
+      internalID: 571723303608989132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BB-Character-Left_2
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 1702
+        width: 262
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7497c148fc4cd6f80800000000000000
+      internalID: -8111610958270662329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BB-Character-Left_3
+      rect:
+        serializedVersion: 2
+        x: 1271
+        y: 1706
+        width: 306
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e74431331c33a9a0800000000000000
+      internalID: -6223064206968338456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BB-Character-Left_4
+      rect:
+        serializedVersion: 2
+        x: 1866
+        y: 1692
+        width: 246
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f545f7bb5c9b4d790800000000000000
+      internalID: -7506170420014394273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BB-Character-Left_5
+      rect:
+        serializedVersion: 2
+        x: 2171
+        y: 1692
+        width: 219
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50b062cd1770d03e0800000000000000
+      internalID: -2086002866796492027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BB-Character-Left_6
+      rect:
+        serializedVersion: 2
+        x: 2824
+        y: 1690
+        width: 188
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67859a61e3b91be40800000000000000
+      internalID: 5670484096806639734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BB-Character-Left_7
+      rect:
+        serializedVersion: 2
+        x: 3079
+        y: 1690
+        width: 184
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fd5171bb0eaa76e0800000000000000
+      internalID: -1838966132582556168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BB-Character-Left_8
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 1289
+        width: 271
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2e02ef4571fa5dd0800000000000000
+      internalID: -2496417557269836243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BB-Character-Left_9
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 1279
+        width: 281
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff9380d3be896f160800000000000000
+      internalID: 7058997602058516991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BB-Character-Left_10
+      rect:
+        serializedVersion: 2
+        x: 1413
+        y: 1284
+        width: 304
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c149f9970141a8210800000000000000
+      internalID: 1335902300461306908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BB-Character-Left_11
+      rect:
+        serializedVersion: 2
+        x: 1773
+        y: 889
+        width: 274
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56c7be87afc7de300800000000000000
+      internalID: 283019766806576229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BB-Character-Left_12
+      rect:
+        serializedVersion: 2
+        x: 2094
+        y: 902
+        width: 271
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8992f478a3e8d190800000000000000
+      internalID: -7937344030584432243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BB-Character-Left_13
+      rect:
+        serializedVersion: 2
+        x: 2388
+        y: 900
+        width: 266
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3586c8b2e62c3cf50800000000000000
+      internalID: 6900572832494544979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BB-Character-Left_14
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 417
+        width: 271
+        height: 303
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c6c85f79b32bac80800000000000000
+      internalID: -8310509407769672000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BB-Character-Left_15
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 641
+        width: 125
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eedc5c422fb455300800000000000000
+      internalID: 240181658505301486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BB-Character-Left_16
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 667
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16774b71c6cb61fc0800000000000000
+      internalID: -3524422485930641567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BB-Character-Left_17
+      rect:
+        serializedVersion: 2
+        x: 2753
+        y: 532
+        width: 266
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a23f91f59f16dbb0800000000000000
+      internalID: -4911703614736616799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BB-Character-Left_18
+      rect:
+        serializedVersion: 2
+        x: 3103
+        y: 538
+        width: 239
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17f56464049f03220800000000000000
+      internalID: 2463743050623901553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BB-Character-Left_19
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 557
+        width: 136
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a2882d66c5132640800000000000000
+      internalID: 5053907148818907815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BB-Character-Left_20
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 446
+        width: 146
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c9575bcb403c7310800000000000000
+      internalID: 1404050285924932040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BB-Character-Left_21
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 353
+        width: 62
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e65145bee283a9070800000000000000
+      internalID: 8113859452829177198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      BB-Character-Left_0: 1556894721669192155
+      BB-Character-Left_1: 571723303608989132
+      BB-Character-Left_10: 1335902300461306908
+      BB-Character-Left_11: 283019766806576229
+      BB-Character-Left_12: -7937344030584432243
+      BB-Character-Left_13: 6900572832494544979
+      BB-Character-Left_14: -8310509407769672000
+      BB-Character-Left_15: 240181658505301486
+      BB-Character-Left_16: -3524422485930641567
+      BB-Character-Left_17: -4911703614736616799
+      BB-Character-Left_18: 2463743050623901553
+      BB-Character-Left_19: 5053907148818907815
+      BB-Character-Left_2: -8111610958270662329
+      BB-Character-Left_20: 1404050285924932040
+      BB-Character-Left_21: 8113859452829177198
+      BB-Character-Left_3: -6223064206968338456
+      BB-Character-Left_4: -7506170420014394273
+      BB-Character-Left_5: -2086002866796492027
+      BB-Character-Left_6: 5670484096806639734
+      BB-Character-Left_7: -1838966132582556168
+      BB-Character-Left_8: -2496417557269836243
+      BB-Character-Left_9: 7058997602058516991
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
