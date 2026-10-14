@@ -42,5 +42,19 @@ public class TaskManager : MonoBehaviour
         return false;
     }
 
+    public bool CanCompleteTask()
+    {
+        if (completedTasks >= tasksRequiredPerDay)
+            return false;
+
+        foreach (Toggle toggle in taskToggles)
+        {
+            if (toggle != null && !toggle.isOn)
+                return true;
+        }
+
+        return false;
+    }
+
     public bool IsDayComplete => completedTasks >= tasksRequiredPerDay;
 }

@@ -10,6 +10,11 @@ public class WashingMachine : MonoBehaviour, IInteractable
     [SerializeField] private bool requiresElectricity = true;
     [SerializeField] private bool countsAsTask = true;
     [SerializeField] private TaskManager taskManager;
+
+    public float EnergyCost => energyCost;
+    public bool RequiresElectricity => requiresElectricity;
+    public bool IsCompleted { get; private set; }
+
     void Start()
     {
 
@@ -22,37 +27,45 @@ public class WashingMachine : MonoBehaviour, IInteractable
 
     public bool CanInteract()
     {
-        return !IsOn;
+        return !IsOn && !IsCompleted;
     }
+
+    public void MarkCompleted()
+    {
+        IsCompleted = true;
+    }
+
 
     public void Interact()
     {
-        if (!CanInteract()) return;
-
-        if (requiresElectricity &&
-        !EnergyManager.Instance.CanPerformEnergyTask())
-        {
+        if (!CanInteract())
             return;
-        }
 
-        if (!EnergyManager.Instance.TryConsume(energyCost))
-        {
-            Debug.Log("Not enough energy!");
+        if (countsAsTask &&
+            (taskManager == null || !taskManager.CanCompleteTask()))
             return;
-        }
 
-        if (countsAsTask)
-        {
-            bool taskCompleted = taskManager.CompleteTask();
-
-            if (taskCompleted && requiresElectricity)
+        EnergyManager.Instance.RequestEnergyTask(
+            energyCost,
+            requiresElectricity,
+            () =>
             {
-                EnergyManager.Instance.SetPeakHour(true);
-            }
-        }
+                if (countsAsTask)
+                {
+                    bool completed = taskManager.CompleteTask();
 
-        TurnOnWashingmachine();
+                    if (!completed)
+                        return;
+                }
+
+                EnergyManager.Instance.OnEnergyTaskCompleted(requiresElectricity);
+
+                MarkCompleted();
+                TurnOnWashingmachine();
+            }
+        );
     }
+
 
     public void TurnOnWashingmachine()
     {

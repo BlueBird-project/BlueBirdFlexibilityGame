@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class EnergyManager : MonoBehaviour
 {
@@ -20,6 +21,9 @@ public class EnergyManager : MonoBehaviour
     [Header("Peak")]
     [SerializeField] private bool isPeakHour;
     [SerializeField] private Image sliderFill;
+
+    [Header("Player")]
+    [SerializeField] private PlayerMovement playerMovement;
 
     public float DailyFuel => dailyFuel;
     public float Battery => battery;
@@ -95,19 +99,126 @@ public class EnergyManager : MonoBehaviour
         return true;
     }
 
-    public bool CanPerformEnergyTask()
+
+    public void RequestEnergyTask(
+        float baseCost,
+        bool requiresElectricity,
+        Action onSuccess)
     {
-        if (isPeakHour)
+        float finalCost = GetTaskCost(baseCost, requiresElectricity);
+
+        Debug.Log(
+            $"Energy task requested. Base cost: {baseCost}, " +
+            $"Peak Hour: {isPeakHour}, Final cost: {finalCost}, " +
+            $"Available energy: {dailyFuel}"
+        );
+
+        if (requiresElectricity && isPeakHour)
         {
-            Debug.Log(
-                "It's a peak hour. The grid is under strain. " +
-                "You need to wait for off-peak, or you need to connect a new energy source."
+            if (!CanConsume(finalCost))
+            {
+                Debug.Log(
+                    $"Not enough energy. Required: {finalCost}, " +
+                    $"available: {dailyFuel}"
+                );
+                return;
+            }
+
+            PeakHourDecisionUI.Instance.Show(
+                baseCost,
+                () =>
+                {
+                    float confirmedCost =
+                        GetTaskCost(baseCost, requiresElectricity);
+
+                    if (!CanConsume(confirmedCost))
+                    {
+                        Debug.Log(
+                            $"Not enough energy. Required: {confirmedCost}, " +
+                            $"available: {dailyFuel}"
+                        );
+                        return;
+                    }
+
+                    if (TryConsume(confirmedCost))
+                    {
+                        if (requiresElectricity && isPeakHour)
+                        {
+                            if (playerMovement != null)
+                            {
+                                playerMovement.SetSadMode(true);
+                            }
+                            else
+                            {
+                                Debug.LogWarning(
+                                    "PlayerMovement is not assigned in EnergyManager."
+                                );
+                            }
+                        }
+
+                        onSuccess?.Invoke();
+                    }
+                },
+                () =>
+                {
+                    Debug.Log("Task postponed by the player.");
+                }
             );
 
-            return false;
+            return;
         }
 
+        if (!CanConsume(finalCost))
+        {
+            Debug.Log(
+                $"Not enough energy. Required: {finalCost}, " +
+                $"available: {dailyFuel}"
+            );
+            return;
+        }
+
+        if (TryConsume(finalCost))
+        {
+            onSuccess?.Invoke();
+        }
+    }
+
+    public void OnEnergyTaskCompleted(bool requiresElectricity)
+    {
+        if (requiresElectricity && !isPeakHour)
+        {
+            Debug.Log("First electrical task completed. Peak Hour activated.");
+            SetPeakHour(true);
+        }
+    }
+
+    public bool TryConsumeTask(float finalCost)
+    {
+        if (!CanConsume(finalCost))
+            return false;
+
+        dailyFuel -= finalCost;
+        UpdateEnergyVisual();
+
+        Debug.Log(
+            $"Energy consumed: {finalCost}. Remaining: {dailyFuel}"
+        );
+
         return true;
+    }
+
+
+    public bool CanPerformEnergyTask()
+    {
+        return !isPeakHour;
+    }
+
+    public float GetTaskCost(float baseCost, bool requiresElectricity)
+    {
+        if (requiresElectricity && isPeakHour)
+            return baseCost * 2f;
+
+        return baseCost;
     }
 
     public void SetPeakHour(bool peak)

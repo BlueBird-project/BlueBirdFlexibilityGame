@@ -10,6 +10,9 @@ public class Fireplace : MonoBehaviour , IInteractable
     [SerializeField] private bool requiresElectricity = false;
     [SerializeField] private bool countsAsTask = true;
     [SerializeField] private TaskManager taskManager;
+    public float EnergyCost => energyCost;
+    public bool RequiresElectricity => requiresElectricity;
+    public bool IsCompleted { get; private set; }
 
     void Start()
     {
@@ -23,37 +26,46 @@ public class Fireplace : MonoBehaviour , IInteractable
 
     public bool CanInteract()
     {
-        return !IsOn;
+        return !IsOn && !IsCompleted;
     }
+
+    public void MarkCompleted()
+    {
+        IsCompleted = true;
+    }
+
 
     public void Interact()
     {
-        if (!CanInteract()) return;
-
-        if (requiresElectricity &&
-        !EnergyManager.Instance.CanPerformEnergyTask())
-        {
+        if (!CanInteract())
             return;
-        }
 
-        if (!EnergyManager.Instance.TryConsume(energyCost))
-        {
-            Debug.Log("Not enough energy!");
+        if (countsAsTask &&
+            (taskManager == null || !taskManager.CanCompleteTask()))
             return;
-        }
 
-        if (countsAsTask)
-        {
-            bool taskCompleted = taskManager.CompleteTask();
-
-            if (taskCompleted && requiresElectricity)
+        EnergyManager.Instance.RequestEnergyTask(
+            energyCost,
+            requiresElectricity,
+            () =>
             {
-                EnergyManager.Instance.SetPeakHour(true);
-            }
-        }
+                if (countsAsTask)
+                {
+                    bool completed = taskManager.CompleteTask();
 
-        TurnFireOn();
+                    if (!completed)
+                        return;
+                }
+
+                EnergyManager.Instance.OnEnergyTaskCompleted(requiresElectricity);
+
+                MarkCompleted();
+
+                TurnFireOn();
+            }
+        );
     }
+
 
     public void TurnFireOn()
     {
@@ -62,9 +74,9 @@ public class Fireplace : MonoBehaviour , IInteractable
 
     public void SetFireOn(bool turnedOn)
     {
-        if (IsOn = turnedOn)
-        {
-            FireAnimator.Play("FireAnimation");
-        }
+        IsOn = turnedOn;
+
+        if (turnedOn && FireAnimator != null)
+            FireAnimator.Play("FireAnimation", 0, 0f);
     }
 }

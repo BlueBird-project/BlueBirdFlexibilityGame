@@ -1,32 +1,70 @@
+
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.U2D.Animation;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 5f;
+    [Header("Movement")]
+    [SerializeField] private float moveSpeed = 3f;
+    [SerializeField] private float sadMoveSpeed = 1.5f;
+
+    [Header("Sprite Libraries")]
+    [SerializeField] private SpriteLibrary spriteLibrary;
+    [SerializeField] private SpriteLibraryAsset playerLibrary;
+    [SerializeField] private SpriteLibraryAsset sadPlayerLibrary;
+
+    [Header("Pollution")]
+    [SerializeField] private PollutionFade pollutionFade;
+
     private Rigidbody2D rb;
     private Vector2 moveInput;
     private Animator animator;
+
+    private bool isSad;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+
+        if (spriteLibrary == null)
+            spriteLibrary = GetComponent<SpriteLibrary>();
+
+        SetSadMode(false);
     }
 
     void Update()
     {
         if (PauseController.IsGamePaused)
         {
-            if(rb.linearVelocity != Vector2.zero)
+            if (rb.linearVelocity != Vector2.zero)
             {
                 rb.linearVelocity = Vector2.zero;
                 StopMovementAnimations();
             }
+
             return;
         }
 
         rb.linearVelocity = moveInput * moveSpeed;
-        animator.SetBool("isWalking", rb.linearVelocity.magnitude > 0);
+        animator.SetBool(
+            "isWalking",
+            rb.linearVelocity.magnitude > 0
+        );
+    }
+
+    public void Move(InputAction.CallbackContext context)
+    {
+        animator.SetBool("isWalking", true);
+
+        if (context.canceled)
+        {
+            StopMovementAnimations();
+        }
+        moveInput = context.ReadValue<Vector2>();
+        animator.SetFloat("InputX", moveInput.x);
+        animator.SetFloat("InputY", moveInput.y);
     }
 
     void StopMovementAnimations()
@@ -36,16 +74,21 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("LastInputY", moveInput.y);
     }
 
-    public void Move(InputAction.CallbackContext context)
+    public void SetSadMode(bool sad)
     {
-        animator.SetBool("isWalking", true);
+        isSad = sad;
 
-        if(context.canceled)
+        moveSpeed = isSad ? sadMoveSpeed : 3f;
+
+        if (spriteLibrary != null)
         {
-            StopMovementAnimations();
+            spriteLibrary.spriteLibraryAsset =
+                isSad ? sadPlayerLibrary : playerLibrary;
         }
-        moveInput = context.ReadValue<Vector2>();
-        animator.SetFloat("InputX", moveInput.x);
-        animator.SetFloat("InputY", moveInput.y);
+
+        if (isSad && pollutionFade != null)
+        {
+            pollutionFade.ShowPollution();
+        }
     }
 }

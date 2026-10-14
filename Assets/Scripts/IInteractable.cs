@@ -1,5 +1,12 @@
+
 public interface IInteractable
 {
-    void Interact();
     bool CanInteract();
+    void Interact();
+
+    float EnergyCost { get; }
+    bool RequiresElectricity { get; }
+
+    bool IsCompleted { get; }
+    void MarkCompleted();
 }

@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5e6fedc2472449cead18ef23b5cb30d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Library:
+  - m_Name: Idle
+    m_Hash: 1008081451
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: IdleWalkLeft
+      m_Hash: 869936408
+      m_Sprite: {fileID: -2086002866796492027, guid: 934c1e58c5bc4f249aed2b3e0e1530ff,
+        type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -2086002866796492027, guid: 934c1e58c5bc4f249aed2b3e0e1530ff,
+        type: 3}
+    - m_Name: IdleWalkRight
+      m_Hash: 608614882
+      m_Sprite: {fileID: -3697536440989600127, guid: e2c0bec1b96a8da48ad6c80f8ab8104a,
+        type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -3697536440989600127, guid: e2c0bec1b96a8da48ad6c80f8ab8104a,
+        type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 2
+  - m_Name: Walk
+    m_Hash: 765711723
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: IdleWalkLeft
+      m_Hash: 869936408
+      m_Sprite: {fileID: -2086002866796492027, guid: 934c1e58c5bc4f249aed2b3e0e1530ff,
+        type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -2086002866796492027, guid: 934c1e58c5bc4f249aed2b3e0e1530ff,
+        type: 3}
+    - m_Name: WalkLeft
+      m_Hash: 1036352720
+      m_Sprite: {fileID: -7506170420014394273, guid: 934c1e58c5bc4f249aed2b3e0e1530ff,
+        type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -7506170420014394273, guid: 934c1e58c5bc4f249aed2b3e0e1530ff,
+        type: 3}
+    - m_Name: IdleWalkRight
+      m_Hash: 608614882
+      m_Sprite: {fileID: -3697536440989600127, guid: e2c0bec1b96a8da48ad6c80f8ab8104a,
+        type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -3697536440989600127, guid: e2c0bec1b96a8da48ad6c80f8ab8104a,
+        type: 3}
+    - m_Name: WalkRight
+      m_Hash: 829942833
+      m_Sprite: {fileID: -3510910393698548862, guid: e2c0bec1b96a8da48ad6c80f8ab8104a,
+        type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -3510910393698548862, guid: e2c0bec1b96a8da48ad6c80f8ab8104a,
+        type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 4
+  m_PrimaryLibraryGUID: 
+  m_ModificationHash: 639275592536951091
+  m_Version: 1
